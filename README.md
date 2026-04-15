@@ -78,5 +78,5 @@ npm run dev
 
 ## 👨‍💻 Author
 
-Juilee Katkar  
-GitHub: [https://github.com/juikatkar](https://github.com/juikatkar)
+**Juilee Katkar**  
+🔗 GitHub: https://github.com/juikatkar
