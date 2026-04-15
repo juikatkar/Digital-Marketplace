@@ -57,10 +57,10 @@ const Login = () => {
           Login
         </button>
 
-        {/* <p className="text-center text-sm text-gray-500 mt-4">
+        { <p className="text-center text-sm text-gray-500 mt-4">
           Demo Login: juikatkar@gmail.com / setup
         </p>
- */}
+ }
       </div>
 
     </div>
