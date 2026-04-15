@@ -17,7 +17,7 @@ React Router (for navigation)
 Context API (for state management, if used)
 
 # Clone the repository
-git clone https://github.com/your-username/shopping-site.git
+git clone https://github.com/juikatkar/Digital-Marketplace.git
 
 # Move into project folder
 cd shopping-site
