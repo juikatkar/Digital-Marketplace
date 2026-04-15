@@ -28,27 +28,27 @@ This project includes product listing, cart functionality, and a responsive UI f
 
 ## 📁 Project Structure
 
-
+```text
 shoppingSite/
 ├── node_modules/
 ├── public/
-│ └── index.html
+│   └── index.html
 ├── src/
-│ ├── assets/
-│ ├── components/
-│ │ ├── Cart.jsx
-│ │ ├── Header.jsx
-│ │ ├── Login.jsx
-│ │ ├── ProductCard.jsx
-│ │ ├── ProductModal.jsx
-│ │ └── Products.jsx
-│ ├── context/
-│ │ ├── AuthContext.jsx
-│ │ └── CartContext.jsx
-│ ├── App.css
-│ ├── App.jsx
-│ ├── index.css
-│ └── main.jsx
+│   ├── assets/
+│   ├── components/
+│   │   ├── Cart.jsx
+│   │   ├── Header.jsx
+│   │   ├── Login.jsx
+│   │   ├── ProductCard.jsx
+│   │   ├── ProductModal.jsx
+│   │   └── Products.jsx
+│   ├── context/
+│   │   ├── AuthContext.jsx
+│   │   └── CartContext.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
