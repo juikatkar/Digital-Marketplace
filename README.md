@@ -76,7 +76,7 @@ npm install
 npm run dev
 
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Juilee Katkar
-GitHub: https://github.com/juikatkar
+Juilee Katkar  
+GitHub: [https://github.com/juikatkar](https://github.com/juikatkar)
