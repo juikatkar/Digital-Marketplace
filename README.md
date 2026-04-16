@@ -8,7 +8,8 @@ This project includes product listing, cart functionality, and a responsive UI f
 ## 🚀 Features
 
 - Product listing page  
-- Product details view  
+- Product details view (See More button)
+- Search Functionality
 - Add to cart / remove from cart  
 - Cart total calculation  
 - Responsive design  
