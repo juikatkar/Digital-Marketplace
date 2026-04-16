@@ -8,14 +8,22 @@ const Products = () => {
 
   const [products, setProducts] = useState([])
   const [selected, setSelected] = useState(null)
-  const [wishlist, setWishlist] = useState([])
+
+  const [search, setSearch] = useState("")
+  const [category, setCategory] = useState("all")
+  const [categories, setCategories] = useState([])
 
   const { addToCart } = useContext(CartContext)
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then(res => res.json())
-      .then(data => setProducts(data))
+      .then(data => {
+        setProducts(data)
+
+        const unique = [...new Set(data.map(p => p.category))]
+        setCategories(unique)
+      })
   }, [])
 
   const openModal = (product) => {
@@ -26,33 +34,36 @@ const Products = () => {
     setSelected(null)
   }
 
-  const toggleWishlist = (product) => {
-    setWishlist((prev) => {
-      const exists = prev.find((p) => p.id === product.id)
+  const filteredProducts = products.filter(p => {
 
-      if (exists) {
-        return prev.filter((p) => p.id !== product.id)
-      } else {
-        return [...prev, product]
-      }
-    })
-  }
+    const matchSearch =
+      p.title.toLowerCase().includes(search.toLowerCase())
+
+    const matchCategory =
+      category === "all" || p.category === category
+
+    return matchSearch && matchCategory
+  })
 
   return (
-    <div className="bg-gray-100 min-h-screen bg-gradient-to-br from-white-400 via-white-200">
+    <div className="bg-gray-100 min-h-screen">
 
-      <Header />
+      <Header
+        search={search}
+        setSearch={setSearch}
+        category={category}
+        setCategory={setCategory}
+        categories={categories}
+      />
 
       <div className="max-w-7xl mx-auto p-6 grid md:grid-cols-3 gap-6">
 
-        {products.map(product => (
+        {filteredProducts.map(product => (
           <ProductCard
             key={product.id}
             product={product}
             openModal={openModal}
             addToCart={addToCart}
-            toggleWishlist={toggleWishlist}
-            isLiked={wishlist.some(p => p.id === product.id)}
           />
         ))}
 

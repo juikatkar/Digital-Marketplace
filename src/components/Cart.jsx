@@ -16,7 +16,13 @@ const Cart = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
 
-      <Header />
+      <Header
+        search=""
+        setSearch={() => { }}
+        category="all"
+        setCategory={() => { }}
+        categories={[]}
+      />
 
       <div className="max-w-4xl mx-auto p-6">
 
