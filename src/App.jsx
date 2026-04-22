@@ -7,12 +7,10 @@ import Products from "./components/Products"
 import Cart from "./components/Cart"
 
 const App = () => {
-
   const { user } = useContext(AuthContext)
 
   return (
     <Routes>
-
       <Route path="/login" element={<Login />} />
 
       <Route
@@ -24,7 +22,6 @@ const App = () => {
         path="/cart"
         element={user ? <Cart /> : <Navigate to="/login" />}
       />
-
     </Routes>
   )
 }

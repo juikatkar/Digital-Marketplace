@@ -3,7 +3,6 @@ import { createContext, useState } from "react"
 export const AuthContext = createContext()
 
 export const AuthProvider = ({ children }) => {
-
   const [user, setUser] = useState(localStorage.getItem("user"))
 
   const login = (email, password) => {
@@ -12,7 +11,7 @@ export const AuthProvider = ({ children }) => {
       setUser(email)
       return true
     }
-      return false
+    return false
   }
 
   const logout = () => {
